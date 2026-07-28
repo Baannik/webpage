@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbara Annicchiarico</title>
+  <meta name="description" content="Barbara Annicchiarico – Professor of Public Economics, Roma Tre University">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --maroon:   #2e0112;
+      --maroon-light: #5a0a2a;
+      --accent:   #9b2248;
+      --bg:       #f7f3f1;
+      --surface:  #ffffff;
+      --text:     #1a1a1a;
+      --muted:    #6b5c5c;
+      --border:   #e0d4d0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 300;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── HEADER ─────────────────────────────── */
+    header {
+      background: var(--maroon);
+      padding: 2rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      font-weight: 400;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── NAV ─────────────────────────────────── */
+    nav {
+      background: var(--surface);
+      border-bottom: 2px solid var(--border);
+      padding: 0 3rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 1rem 1.4rem;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 3px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: var(--maroon);
+      border-bottom-color: var(--accent);
+    }
+
+    /* ── MAIN LAYOUT ─────────────────────────── */
+    main {
+      max-width: 960px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    /* ── PHOTO ───────────────────────────────── */
+    .photo-col img {
+      width: 100%;
+      border-radius: 4px;
+      display: block;
+      box-shadow: 0 6px 24px rgba(46,1,18,0.15);
+    }
+
+    /* ── BIO ─────────────────────────────────── */
+    .bio-col h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--maroon);
+      margin-bottom: 0.25rem;
+    }
+
+    .bio-col .title {
+      font-size: 1.05rem;
+      color: var(--accent);
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-block {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.9;
+    }
+
+    .info-block a {
+      color: var(--maroon-light);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .info-block a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    /* ── PROFILE LINKS ───────────────────────── */
+    .profile-links {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .profile-links a {
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      border-radius: 2px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1.5px solid var(--border);
+      color: var(--maroon);
+      background: transparent;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .profile-links a:hover {
+      background: var(--maroon);
+      color: #fff;
+      border-color: var(--maroon);
+    }
+
+    /* ── RESEARCH GROUP ──────────────────────── */
+    .highlight-box {
+      margin-top: 2rem;
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 4px 4px 0;
+      font-size: 0.95rem;
+    }
+
+    .highlight-box a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .highlight-box a:hover { text-decoration: underline; }
+
+    /* ── QUOTE ───────────────────────────────── */
+    blockquote {
+      grid-column: 1 / -1;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--muted);
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-top: 1rem;
+    }
+
+    /* ── FOOTER ──────────────────────────────── */
+    footer {
+      background: var(--maroon);
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      padding: 1.25rem;
+      font-size: 0.8rem;
+      margin-top: 4rem;
+    }
+
+    /* ── RESPONSIVE ──────────────────────────── */
+    @media (max-width: 680px) {
+      header { padding: 1.5rem; }
+      header h1 { font-size: 1.3rem; }
+      nav { padding: 0 1rem; }
+      main {
+        grid-template-columns: 1fr;
+        margin: 2rem auto;
+        gap: 2rem;
+      }
+      .photo-col img { max-width: 180px; }
+      blockquote { grid-column: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Barbara Annicchiarico</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.htm" class="active">Home</a></li>
+      <li><a href="research.htm">Research</a></li>
+      <li><a href="cv.htm">CV</a></li>
+      <li><a href="teaching.htm">Teaching</a></li>
+      <li><a href="codes.htm">Codes</a></li>
+      <li><a href="others.htm">Other stuff</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div class="photo-col">
+      <img src="BB_NEW.jpg" alt="Barbara Annicchiarico">
+    </div>
+
+    <div class="bio-col">
+      <h2>Barbara Annicchiarico</h2>
+      <p class="title">Professor of Public Economics</p>
+
+      <div class="info-block">
+        <a href="https://giurisprudenza.uniroma3.it/" target="_blank">Department of Law</a><br>
+        <a href="https://www.uniroma3.it/en/" target="_blank">Roma Tre University</a><br>
+        Via Ostiense, 163 · 00154 Roma, Italy<br><br>
+
+        E-mail:
+        <A HREF="mailto:barbara.annicchiarico@uniroma3.it">barbara.annicchiarico@uniroma3.it</A>  
+        &nbsp;·&nbsp;
+        <A HREF="mailto:barbara.annicchiarico@gmail.com">barbara.annicchiarico@gmail.com</A>
+        <br>
+
+        Office: 2<sup>nd</sup> floor, Room 243<br><br>
+
+        <a href="https://linkedin.com/in/barbara-annicchiarico-60a6a06a" target="_blank">LinkedIn</a>
+        &nbsp;·&nbsp;
+        <a href="https://giurisprudenza.uniroma3.it/persone/NnUwRitRa05zNjNDdHlEUy9aUlgydElBRGF0Zm90QUVFUUVueXNyVmtPUT0=/" target="_blank">Roma Tre page</a>
+      </div>
+
+      <div class="profile-links">
+        <a href="https://www.webofscience.com/wos/author/record/1745861" target="_blank">Web of Science</a>
+        <a href="https://www.scopus.com/authid/detail.url?authorId=16021129900" target="_blank">Scopus</a>
+        <a href="https://orcid.org/0000-0003-1601-6843" target="_blank">Orcid</a>
+        <a href="http://ideas.repec.org/e/pan104.html" target="_blank">IDEAS · RePec</a>
+        <a href="http://scholar.google.it/citations?user=E2i5Q7AAAAAJ&hl=it" target="_blank">Google Scholar</a>
+        <a href="http://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=339834" target="_blank">SSRN</a>
+      </div>
+
+      <div class="highlight-box">
+        Visit the <a href="https://sites.google.com/view/inequality-in-rome/" target="_blank">Inequality in Rome Research Group</a>
+        and check out our <a href="https://sites.google.com/view/inequality-in-rome/news" target="_blank">latest news</a>.
+      </div>
+    </div>
+
+    <blockquote>
+      Art and science are free, and so is their teaching.
+    </blockquote>
+
+  </main>
+
+  <footer>
+  
+  </footer>
+
+  <!-- Histats.com START (async) -->
+  <div id="histats_counter"></div>
+  <script type="text/javascript">
+    var _Hasync = _Hasync || [];
+    _Hasync.push(['Histats.start', '1,4538839,4,511,95,18,00000000']);
+    _Hasync.push(['Histats.fasi', '1']);
+    _Hasync.push(['Histats.track_hits', '']);
+    (function() {
+      var hs = document.createElement('script');
+      hs.type = 'text/javascript';
+      hs.async = true;
+      hs.src = ('//s10.histats.com/js15_as.js');
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+    })();
+  </script>
+
+</body>
+</html>

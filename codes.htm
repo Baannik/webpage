@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codes – Barbara Annicchiarico</title>
+  <meta name="description" content="Codes – Barbara Annicchiarico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --maroon: #2e0112; --maroon-light: #5a0a2a; --accent: #9b2248;
+      --bg: #f7f3f1; --surface: #ffffff; --text: #1a1a1a;
+      --muted: #6b5c5c; --border: #e0d4d0;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Source Sans 3', sans-serif; font-weight: 300; background: var(--bg); color: var(--text); line-height: 1.7; }
+    header { background: var(--maroon); padding: 2rem 3rem; }
+    header h1 { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 400; color: #fff; letter-spacing: 0.02em; }
+    nav { background: var(--surface); border-bottom: 2px solid var(--border); padding: 0 3rem; position: sticky; top: 0; z-index: 10; }
+    nav ul { list-style: none; display: flex; }
+    nav ul li a { display: block; padding: 1rem 1.4rem; text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; border-bottom: 3px solid transparent; transition: color 0.2s, border-color 0.2s; }
+    nav ul li a:hover, nav ul li a.active { color: var(--maroon); border-bottom-color: var(--accent); }
+    main { max-width: 760px; margin: 3rem auto; padding: 0 2rem; }
+    h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--maroon); margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+    .code-item { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
+    .code-item p { font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .code-item a:not(.download-btn) { color: var(--maroon-light); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s, border-color 0.2s; }
+    .code-item a:not(.download-btn):hover { color: var(--accent); border-bottom-color: var(--accent); }
+    .download-btn { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.5rem; padding: 0.4rem 0.9rem; background: var(--maroon); color: #fff !important; text-decoration: none; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; border-radius: 3px; border: none; transition: background 0.2s; }
+    .download-btn:hover { background: var(--accent); color: #fff !important; }
+    h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--accent); margin: 2.5rem 0 1rem; font-weight: 400; }
+    .wip-list { list-style: none; }
+    .wip-list li { padding: 0.6rem 0 0.6rem 1rem; border-left: 3px solid var(--border); margin-bottom: 0.5rem; font-size: 0.95rem; color: var(--muted); }
+    .wip-img { float: right; margin: 0 0 1rem 2rem; width: 240px; border-radius: 4px; box-shadow: 0 4px 16px rgba(46,1,18,0.12); }
+    footer { background: var(--maroon); color: rgba(255,255,255,0.6); text-align: center; padding: 1.25rem; font-size: 0.8rem; margin-top: 4rem; clear: both; }
+    @media (max-width: 680px) { header { padding: 1.5rem; } nav { padding: 0 1rem; } main { margin: 2rem auto; } .wip-img { float: none; width: 100%; margin: 1rem 0; } }
+  </style>
+</head>
+<body>
+  <header><h1>Barbara Annicchiarico</h1></header>
+  <nav>
+    <ul>
+      <li><a href="index.htm">Home</a></li>
+      <li><a href="research.htm">Research</a></li>
+      <li><a href="cv.htm">CV</a></li>
+      <li><a href="teaching.htm">Teaching</a></li>
+      <li><a href="codes.htm" class="active">Codes</a></li>
+      <li><a href="others.htm">Other stuff</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Codes</h2>
+
+    <div class="code-item">
+      <p>New Keynesian E-DSGE Model with Capital Accumulation: Carbon Tax vs. Cap-and-Trade.</p>
+      <p>See <a href="http://www.sciencedirect.com/science/article/pii/S0095069614000850" target="_blank">"Environmental Policy and Macroeconomic Dynamics in a New Keynesian Model"</a> (B. Annicchiarico &amp; <a href="https://fabiodidio.site.uniroma1.it/" target="_blank">F. Di Dio</a>).</p>
+      <a class="download-btn" href="NK-E-DSGE-Capital.zip">&#8595; NK-E-DSGE-Capital.zip</a>
+    </div>
+
+    <div class="code-item">
+      <p>A Two-Country Model for the Analysis of Environmental Policy.</p>
+      <p>See <a href="https://doi.org/10.1016/j.reseneeco.2019.07.006" target="_blank">"International Transmission of the Business Cycle and Environmental Policy"</a> (B. Annicchiarico &amp; <a href="https://sites.google.com/view/francescadiluiso/home" target="_blank">F. Diluiso</a>).</p>
+      <a class="download-btn" href="https://doi.org/10.17632/zyszm7n87h.3" target="_blank">Replication codes at Mendeley Data</a>
+    </div>
+
+    <h3>Work in progress</h3>
+    <img class="wip-img" src="wip.jpg" alt="Work in progress">
+    <ul class="wip-list">
+      <li>A Simple Environmental New Keynesian Model with Rotemberg Pricing</li>
+      <li>An E-DSGE Model with Financial Frictions</li>
+      <li>A Behavioral E-DSGE NK Model</li>
+    </ul>
+  </main>
+  <footer>&copy; Barbara Annicchiarico</footer>
+</body>
+</html>
